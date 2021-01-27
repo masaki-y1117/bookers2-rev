@@ -1,2 +1,18 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>User info</h1>
+<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no-image.jpg", size:'60x60' %>
+<table>
+  <tbody>
+    <tr>
+      <th>name</th>
+      <th><%= @user.name %></th>
+    </tr>
+    <tr>
+      <th>introduction</th>
+      <th><%= @user.introduction %></th>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to edit_user_path(@user) do %>
+ <p class="btn">btn</p>
+<% end %>
