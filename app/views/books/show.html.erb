@@ -1,3 +1,6 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-1">
       <h2>Book detail</h2>
       <table class="table">
         <tr>
@@ -13,5 +16,10 @@
             <% end %>
           </td>
           <td><%= @book.body%></td>
+          <td><%= link_to "Edit", edit_book_path(@book), local: true, class: "btn btn-success" %></td>
+          <td><%= link_to "Destroy", book_path(@book), method: :delete, local: true, class: "btn btn-danger" %></td>
         </tr>
       </table>
+    </div>
+  </div>
+</div>
